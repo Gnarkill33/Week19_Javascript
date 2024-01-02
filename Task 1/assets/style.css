@@ -1,0 +1,20 @@
+.title {
+    background-image: url(images/fc379a66.jpg);
+    height: 30vh;
+    width: 100vw;
+    background-size:cover;
+}
+
+.box {
+    width: 70vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name{
+    font-weight:700;
+    font-size:25px;
+    color:rgb(39, 37, 37)
+}
