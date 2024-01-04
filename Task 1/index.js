@@ -21,13 +21,13 @@ function addPostToContainer(box, element) {
 
 // Делаем запрос, получаем посты и добавляем на страницу
 
-fetch('https://jsonplaceholder.typicode.com/posts')
+fetch("https://jsonplaceholder.typicode.com/posts")
 .then((response) => response.json())
 .then((posts) => {
-    console.log(posts);
-    // posts.forEach((post) => {
-    // const element = createPost(post);
-    // addPostToContainer(box, element);
-    // });
+    posts.forEach((post) => {
+    const element = createPost(post);
+    addPostToContainer(box, element);
+    });
 });
+
 

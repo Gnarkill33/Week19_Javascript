@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(255, 242, 227);
+}
+
 .title {
     background-image: url(images/fc379a66.jpg);
     height: 30vh;
