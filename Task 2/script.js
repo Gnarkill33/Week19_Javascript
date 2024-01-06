@@ -21,11 +21,6 @@ function addPost (title, body) {
     .then((data) => {
 
 // Добавляем пост в разметку
-        if (titleInput.value === '' || bodyInput.value === '') {
-            // const element = document.createElement('div');
-            // element.textContent = 'Введите значение';
-            // container.appendChild(element);
-        } else {
             const element = document.createElement('div');
             const nameField = document.createElement('h3');
             element.appendChild(nameField);
@@ -34,7 +29,6 @@ function addPost (title, body) {
             element.appendChild(textField);
             textField.textContent = data.body;
             container.appendChild(element);
-    }
     })
     .catch((error) => {
         console.log(`Что-то пошло не так.
@@ -48,7 +42,13 @@ addButton.addEventListener('click', function() {
     const body = bodyInput.value;
 
 // Вызываем функцию
+    if (titleInput.value === "" || bodyInput.value === "") {
+    const element = document.createElement("div");
+    element.textContent = "Введите значение";
+    container.appendChild(element);
+} else {
     addPost(title, body);
+}
 
 // Очищаем поля
     titleInput.value = '';

@@ -13,21 +13,15 @@ function createPost(post) {
     article.textContent = `Статья: ${post.body}`;
 }
 
-// Создаем функцию, которая добавляет разметку в контейнер
-
-function addPostToContainer(box, element) {
-    box.append(element);
-}
-
 // Делаем запрос, получаем посты и добавляем на страницу
 
 fetch("https://jsonplaceholder.typicode.com/posts")
 .then((response) => response.json())
 .then((posts) => {
+    console.log(posts);
     posts.forEach((post) => {
-    const element = createPost(post);
-    addPostToContainer(box, element);
-    });
+        createPost(post);
+})
 });
 
 
